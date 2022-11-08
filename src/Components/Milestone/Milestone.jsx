@@ -1,32 +1,27 @@
 export const Milestone = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
-            <div className="grid grid-cols-2 row-gap-8 md:grid-cols-4 border-2 rounded-md">
-                <div className="text-center my-4">
-                    <h6 className="text-3xl font-bold text-deep-purple-accent-400">
+        <div className="px-2 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-2 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] rounded-md text-center">
+            <div className="grid grid-cols-1 row-gap-8 md:grid-cols-3  rounded-md  ">
+                <div className="text-center  bg-white grid place-items-center p-8">
+                    <h6 className="text-3xl font-bold text-deep-purple-accent-400 ">
                         144K
                     </h6>
                     <p className="font-bold">Downloads</p>
                 </div>
-                <div className="text-center my-4">
-                    <h6 className="text-3xl font-bold text-deep-purple-accent-400">
-                        32.1K
+                <div className="text-center  bg-white grid place-items-center p-8">
+                    <h6 className="text-3xl font-bold text-deep-purple-accent-400 ">
+                        144K
                     </h6>
-                    <p className="font-bold">Users</p>
+                    <p className="font-bold">Downloads</p>
                 </div>
-                <div className="text-center my-4">
-                    <h6 className="text-3xl font-bold text-deep-purple-accent-400">
-                        12.9K
+                <div className="text-center  bg-white grid place-items-center p-8">
+                    <h6 className="text-3xl font-bold text-deep-purple-accent-400 ">
+                        144K
                     </h6>
-                    <p className="font-bold">Subscribers</p>
+                    <p className="font-bold">Downloads</p>
                 </div>
-                <div className="text-center my-4">
-                    <h6 className="text-3xl font-bold text-deep-purple-accent-400">
-                        24.5K
-                    </h6>
-                    <p className="font-bold">Cookies</p>
-                </div>
-            </div>
-        </div>
+
+            </div >
+        </div >
     );
 };

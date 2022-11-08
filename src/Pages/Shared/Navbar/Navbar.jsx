@@ -56,6 +56,7 @@ const Navbar = () => {
                                 : "invisible opacity-0"
                                 }`}
                         >
+
                             <li role="none" className="flex items-stretch">
                                 <Link
                                     role="menuitem"
@@ -64,7 +65,7 @@ const Navbar = () => {
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
                                     href="javascript:void(0)"
                                 >
-                                    <span>Blog</span>
+                                    <span>Services</span>
                                 </Link>
                             </li>
                             <li role="none" className="flex items-stretch">
@@ -75,7 +76,7 @@ const Navbar = () => {
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
                                     href="javascript:void(0)"
                                 >
-                                    <span>Planning</span>
+                                    <span>Blog</span>
                                 </Link>
                             </li>
                             <li role="none" className="flex items-stretch">
