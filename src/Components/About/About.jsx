@@ -10,9 +10,9 @@ export const About = () => {
 
                     <div className="max-w-xl mb-6 text-center md:text-left">
                         <h2 className="max-w-lg mb-6  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                            Let us handle
+                            Let us handle to
                             <br className="hidden md:block" />
-                            capture next{' '}
+                            capture your  next{' '}
                             <span className="inline-block text-deep-purple-accent-400">
                                 moment.❤
                             </span>
