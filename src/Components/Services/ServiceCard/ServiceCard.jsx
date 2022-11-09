@@ -49,6 +49,12 @@ const ServiceCard = ({ service }) => {
                                                 about.length > 100 ? about.slice(0, 120) + "....." : about
                                             }
                                         </p>
+                                        <Link to={`/services/${_id}`} ><button
+                                            class="relative font-medium text-sky-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-sky-600 before:transition hover:before:scale-x-100"
+
+                                        >
+                                            SEE DETAILS
+                                        </button></Link>
                                     </div>
                                 </div>
                             </div>
