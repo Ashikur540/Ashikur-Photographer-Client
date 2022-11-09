@@ -1,6 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { CiLogin } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../../Contexts/AuthProvider';
 const Navbar = () => {
+    const { user, UserSignOut } = useContext(AuthContext);
+
+
+    const handleLogout = () => {
+        if (!user) {
+            toast.info("log in first atleast!")
+        }
+        else {
+            UserSignOut()
+                .then(() => {
+                    toast.success("logged out")
+                })
+                .catch(error => {
+                    toast.error(error.message)
+                })
+        }
+    }
 
     const [isToggleOpen, setIsToggleOpen] = useState(false)
     return (
@@ -129,17 +149,16 @@ const Navbar = () => {
                                 className="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-white"
                             >
                                 <img
-                                    src="https://i.pravatar.cc/40?img=35"
+                                    src={user?.photoURL ? user?.photoURL : "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
                                     alt="user name"
-                                    title="user name"
+                                    title={user?.displayName ? user.displayName : "no user found"}
                                     width="40"
                                     height="40"
                                     className="max-w-full rounded-full"
                                 />
-                                <span className="absolute bottom-0 right-0 inline-flex items-center justify-center gap-1 rounded-full border-2 border-white bg-pink-500 p-1 text-sm text-white">
-                                    <span className="sr-only"> 7 new emails </span>
-                                </span>
+
                             </Link>
+                            <button className="text-2xl ml-2" title="log out" onClick={handleLogout}><CiLogin /></button>
                             {/*        <!-- End Avatar --> */}
                         </div>
                     </nav>
