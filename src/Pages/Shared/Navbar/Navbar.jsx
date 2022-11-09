@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
+
     const [isToggleOpen, setIsToggleOpen] = useState(false)
     return (
 
@@ -59,6 +60,7 @@ const Navbar = () => {
 
                             <li role="none" className="flex items-stretch">
                                 <Link
+                                    to="/services/all"
                                     role="menuitem"
                                     aria-haspopup="false"
                                     tabIndex="0"
@@ -91,15 +93,32 @@ const Navbar = () => {
                                     <span>Add services</span>
                                 </Link>
                             </li>
-                            <li role="none" className="flex items-stretch">
+                            <li role="none" className="flex items-stretch md:items-center md:justify-center">
+
                                 <Link
+                                    to="/login"
                                     role="menuitem"
                                     aria-haspopup="false"
                                     tabIndex="0"
-                                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                                    href="javascript:void(0)"
+                                    class="inline-flex items-center max-h-12 justify-center rounded border bg-gradient-to-bl from-sky-400 to-indigo-900 px-8 py-3 text-white hover:bg-transparent hover:text-slate-300 focus:outline-none focus:ring active:text-indigo-500"
+
                                 >
-                                    <span>My reviews</span>
+                                    <span class="text-sm font-medium"> Get Started </span>
+
+                                    <svg
+                                        class="ml-3 h-5 w-5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        />
+                                    </svg>
                                 </Link>
                             </li>
                         </ul>

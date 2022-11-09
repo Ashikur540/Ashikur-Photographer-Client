@@ -3,6 +3,8 @@ import Allservices from "../../Components/Allservices/Allservices";
 import Services from "../../Components/Services/Services";
 import Main from "../../Layout/Main";
 import Addservices from "../../Pages/Addservices/Addservices";
+import { Login } from "../../Pages/Authentication/Login/Login";
+import { Register } from "../../Pages/Authentication/Register/Register";
 import Home from "../../Pages/Home/Home";
 import ErrorPage from "../../Pages/Others/Error/ErrorPage";
 
@@ -31,6 +33,16 @@ export const router = createBrowserRouter([
             {
                 path: "/services/add",
                 element: <Addservices />,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "/login",
+                element: < Login />,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "/register",
+                element: < Register />,
                 errorElement: <ErrorPage />,
             }
         ]
