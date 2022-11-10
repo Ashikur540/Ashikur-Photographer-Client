@@ -21,6 +21,10 @@ export const ReviewCard = ({ review, serviceName }) => {
                     >
                         {serviceName}
                     </a>
+                    <p class="text-sm  uppercase tracking-widest text-slate-700 font-bold">
+                        🧡  {rating}
+
+                    </p>
                 </div>
                 {/* <div className="mb-2">
                             <a
@@ -52,24 +56,7 @@ export const ReviewCard = ({ review, serviceName }) => {
                             {reviewerName}
                         </p>
 
-                        <p class="text-sm  uppercase tracking-widest text-slate-700 font-bold">
-                            {
-                                rating === 1 && "💛"
-                            }
-                            {
-                                rating === 2 && "💛💛"
-                            }
-                            {
-                                rating === 3 && "💛💛💛"
-                            }
-                            {
-                                rating === 4 && "💛💛💛💛"
-                            }
-                            {
-                                rating === 5 && "💛💛💛💛💛"
-                            }
 
-                        </p>
 
                     </div>
                 </div>

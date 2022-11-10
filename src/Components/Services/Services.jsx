@@ -51,7 +51,7 @@ const Services = () => {
                             class="inline-flex items-center my-8 rounded border border-indigo-600 px-8 py-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
                             href="/download"
                         >
-                            <span class="text-sm font-medium"> Show more </span>
+                            <span class="text-sm font-medium"> Show All </span>
 
                             <svg
                                 class="ml-3 h-5 w-5"

@@ -104,6 +104,8 @@ const ServiceDetails = () => {
 
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 max-w-sm mx-auto md:max-w-full">
+
+
                     {
                         reviews.map(review => <ReviewCard
                             key={serviceDetails.serviceId}
@@ -112,13 +114,19 @@ const ServiceDetails = () => {
                         ></ReviewCard>)
                     }
                 </div>
-                <button
-                    class="inline-flex mt-12 items-center max-h-12 justify-center rounded border bg-gradient-to-bl from-sky-400 to-indigo-900 px-8 py-3 text-white hover:bg-transparent hover:text-slate-300 focus:outline-none focus:ring active:text-indigo-500"
-                    data-bs-toggle="modal" data-bs-target="#exampleModalCenter"
-                >
-                    <FaPlus></FaPlus>
-                    <span class="text-sm font-medium ml-4"> Add review </span>
-                </button>
+                {
+                    user?.uid ? <button
+                        class="inline-flex mt-12 items-center max-h-12 justify-center rounded border bg-gradient-to-bl from-sky-400 to-indigo-900 px-8 py-3 text-white hover:bg-transparent hover:text-slate-300 focus:outline-none focus:ring active:text-indigo-500"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalCenter"
+                    >
+                        <FaPlus></FaPlus>
+                        <span class="text-sm font-medium ml-4"> Add review </span>
+                    </button>
+                        :
+                        <div className="text-2xl font-semibold my-8 text-slate-400">
+                            Please login first to add your review
+                        </div>
+                }
 
                 {/* modal body */}
                 <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">

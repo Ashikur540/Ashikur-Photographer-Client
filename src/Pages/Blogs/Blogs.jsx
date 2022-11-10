@@ -36,8 +36,8 @@ const Blogs = () => {
             <div className="bg-base-100 px-6 py-3 text-left max-w-5xl border-4 rounded-lg shadow-lg mx-auto my-10">
                 <h1 className="text-neutral font-semibold py-4 text-xl">How does NodeJS handle multiple requests at the same time?</h1>
                 <p className="text-neutral">
-                    Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node.js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.<br /><br />
-                    Multiple clients make multiple requests to the NodeJS server. NodeJS receives these requests and places them into the EventQueue . NodeJS server has an internal component referred to as the EventLoop which is an infinite loop that receives requests and processes them. This EventLoop is single threaded.t.<br />
+                    Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application.Node.js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.<br /><br />
+                    So, when  Multiple clients make multiple requests to the NodeJS server. NodeJS receives these requests and places them into the EventQueue . NodeJS server has an internal component referred to as the EventLoop which is an infinite loop that receives requests and processes them. This EventLoop is single threaded.t.<br />
                 </p>
             </div>
         </div>

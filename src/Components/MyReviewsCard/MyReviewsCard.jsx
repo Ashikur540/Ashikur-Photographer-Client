@@ -1,6 +1,6 @@
 export const MyReviewsCard = ({ reviews }) => {
 
-    const { reviewerName, reviewerPhoto, reviewtext } = reviews;
+    const { reviewerName, reviewerPhoto, reviewtext, rating } = reviews;
     return (
 
         <div className="p-8 bg-sky-50 shadow-md border rounded">
@@ -46,6 +46,9 @@ export const MyReviewsCard = ({ reviews }) => {
             </a>
             <p className="mb-5 text-gray-700">
                 {reviewtext}
+            </p>
+            <p class="text-sm  uppercase tracking-widest text-slate-800 font-bold">
+                💛{rating}
             </p>
 
         </div>
