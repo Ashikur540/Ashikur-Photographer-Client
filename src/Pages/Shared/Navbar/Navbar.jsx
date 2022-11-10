@@ -92,19 +92,21 @@ const Navbar = () => {
                             </li>
                             <li role="none" className="flex items-stretch">
                                 <Link
+                                    to="/blogs"
                                     role="menuitem"
                                     aria-haspopup="false"
                                     tabIndex="0"
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
                                     href="javascript:void(0)"
                                 >
-                                    <span>Blog</span>
+                                    <span>Blogs</span>
                                 </Link>
                             </li>
 
                             {
                                 user?.uid && <li role="none" className="flex items-stretch">
                                     <Link
+                                        to="/reviews"
                                         role="menuitem"
                                         aria-haspopup="false"
                                         tabIndex="0"

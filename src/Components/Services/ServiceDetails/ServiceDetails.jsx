@@ -6,7 +6,8 @@ import { ReviewCard } from "../../../Components/ReviewCard/ReviewCard";
 import { AuthContext } from '../../../Contexts/AuthProvider';
 const ServiceDetails = () => {
     const { user } = useContext(AuthContext);
-    const [reviews, setReviews] = useState([])
+    const [reviews, setReviews] = useState([]);
+    const [refresh, setRefresh] = useState(false);
     const serviceDetails = useLoaderData().data;
     const { _id, name, about, price, rating, picture } = serviceDetails;
     console.log(serviceDetails);
@@ -26,7 +27,7 @@ const ServiceDetails = () => {
                 }
             })
             .catch(err => toast.error(err.message))
-    }, [])
+    }, [refresh])
 
     // post review data to db 
     const handleAddReview = (e) => {
@@ -43,14 +44,24 @@ const ServiceDetails = () => {
             reviewtext,
             rating
         }
+        console.log(reviewInfo);
 
-        fetch(`http://localhost:5000/services/${_id}/reviews`, {
+        fetch(`http://localhost:5000/services/${_id}/reviews/add`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
             body: JSON.stringify(reviewInfo)
         })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    toast.success(data.message);
+                    form.reset();
+                    setRefresh(!refresh)
+                }
+            })
+            .catch(err => toast.error(err.message))
 
     }
 
