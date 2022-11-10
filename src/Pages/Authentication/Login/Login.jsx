@@ -1,5 +1,5 @@
 import { GoogleAuthProvider } from '@firebase/auth';
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import { useLocation } from 'react-router';
 import { Link, useNavigate } from "react-router-dom";
@@ -21,11 +21,11 @@ export const Login = () => {
 
 
     // states
-    const [userInfo, setUserInfo] = useState({
-        email: "",
-        password: "",
+    // const [userInfo, setUserInfo] = useState({
+    //     emailadd: "",
+    //     password: "",
 
-    })
+    // })
 
 
 
@@ -71,7 +71,7 @@ export const Login = () => {
     }
 
     const handleResetPass = (e) => {
-        const email = userInfo.email;
+        const email = e.target.email.value;
         resetUserPassword(email)
             .then(() => {
                 toast.success("we have mail reset link to you mail \n checkout mail", {
@@ -85,24 +85,25 @@ export const Login = () => {
             })
     }
 
+    // const handleEmail = (e) => {
+    //     const emailadd = e.target.value;
+    //     setUserInfo({ ...emailadd, emailadd: emailadd })
+    // }
 
 
 
-    const handleEmail = (e) => {
-        const email = e.target.value;
-        setUserInfo({ ...userInfo, email: email })
-
-    }
-    const handlePassword = (e) => {
-        const password = e.target.value;
-        setUserInfo({ ...password, password: password })
-    }
+    // const handlePassword = (e) => {
+    //     const password = e.target.value;
+    //     setUserInfo({ ...password, password: password })
+    // }
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const password = userInfo.password;
-        const email = userInfo.email;
+        // const password = userInfo.password;
+        // const email = userInfo.emailadd;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
         console.log(email, password);
         // signin
         handleUserSignin(email, password)
@@ -143,12 +144,11 @@ export const Login = () => {
                             {/* <!-- Email input --> */}
                             <div className="mb-6">
                                 <input
-                                    required
+
                                     type="email"
-                                    onChange={handleEmail}
                                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                     name="email"
-                                    placeholder="Email address"
+                                    placeholder="Email address: lutuputu@gmail.com"
                                 />
                             </div>
 
@@ -158,7 +158,7 @@ export const Login = () => {
                                     required
                                     type="password"
 
-                                    onChange={handlePassword}
+
                                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                     name="password"
                                     placeholder="Password"

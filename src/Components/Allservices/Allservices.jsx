@@ -59,7 +59,7 @@ const Allservices = () => {
                                                 }
                                                 {'                                    '}$ {price}
                                             </p>
-                                            <p class="text-gray-600 text-xs">Last updated 3 mins ago</p>
+                                            {/* <p class="text-gray-600 text-xs">Last updated 3 mins ago</p> */}
                                         </div>
                                     </div>
                                     // </div>
