@@ -39,7 +39,10 @@ const ServiceDetails = () => {
         const reviewtext = form.reviewtext.value;
         const rating = form.rating.value;
         console.log(reviewtext, rating);
+        const d = new Date();
+        const postTime = d.getTime();
         const reviewInfo = {
+            postTime: postTime,
             serviceId: _id,
             reviewerEmail: user?.email,
             reviewerName: user?.displayName,

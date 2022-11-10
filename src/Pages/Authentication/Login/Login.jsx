@@ -61,6 +61,7 @@ export const Login = () => {
             toast.success("successfully logged in", {
                 position: "top-center"
             })
+
             navigate(from, { replace: true })
         })
             .catch(error => {

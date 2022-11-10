@@ -30,9 +30,11 @@ const UpdateReview = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reviewtextUpdated = e.target.reviewtext.value
+        const reviewtextUpdated = {
+            reviewtext: e.target.reviewtext.value
+        }
         console.log("reviewtextUpdated", reviewtextUpdated);
-        // send the updated value through post mathod
+        // send the updated value through patch mathod
 
         fetch(`http://localhost:5000/reviews/${id}`, {
 
