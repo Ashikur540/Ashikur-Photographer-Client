@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { FaPlus } from "react-icons/fa";
 import { useLoaderData } from 'react-router';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ReviewCard } from "../../../Components/ReviewCard/ReviewCard";
 import { AuthContext } from '../../../Contexts/AuthProvider';
+
 const ServiceDetails = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
@@ -123,9 +125,21 @@ const ServiceDetails = () => {
                         <span class="text-sm font-medium ml-4"> Add review </span>
                     </button>
                         :
-                        <div className="text-2xl font-semibold my-8 text-slate-400">
-                            Please login first to add your review
-                        </div>
+                        <>
+                            <div className="text-2xl font-semibold my-8 text-slate-400">
+                                Please login first to add your review
+
+                            </div>
+                            <Link className="flex items-center justify-center  my-10" to="/login">
+                                <button
+
+                                    className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-slate-900 border-2 cursor-pointer  transition duration-200 rounded shadow-md bg-sky-50 hover:bg-accent-700 focus:shadow-outline focus:outline-none"
+                                >
+                                    Login
+                                </button>
+
+                            </Link>
+                        </>
                 }
 
                 {/* modal body */}

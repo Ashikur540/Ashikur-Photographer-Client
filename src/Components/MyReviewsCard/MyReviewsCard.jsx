@@ -1,6 +1,13 @@
-export const MyReviewsCard = ({ reviews }) => {
+import { FaFileSignature, FaTrash } from "react-icons/fa";
 
-    const { reviewerName, reviewerPhoto, reviewtext, rating } = reviews;
+
+export const MyReviewsCard = ({ reviews, handleDelete }) => {
+
+
+
+
+
+    const { _id, reviewerName, reviewerPhoto, reviewtext, rating } = reviews;
     return (
 
         <div className="p-8 bg-sky-50 shadow-md border rounded">
@@ -50,7 +57,10 @@ export const MyReviewsCard = ({ reviews }) => {
             <p class="text-sm  uppercase tracking-widest text-slate-800 font-bold">
                 💛{rating}
             </p>
-
+            <div className="flex justify-end ">
+                <button className="text-red-500 tex-xl" onClick={() => { handleDelete(_id) }}><FaTrash /></button>
+                <button className="text-sky-700 tex-xl  ml-6"><FaFileSignature /></button>
+            </div>
         </div>
 
 
