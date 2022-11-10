@@ -10,6 +10,7 @@ import Blogs from "../../Pages/Blogs/Blogs";
 import Home from "../../Pages/Home/Home";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ErrorPage from "../../Pages/Others/Error/ErrorPage";
+import UpdateReview from "../../Pages/UpdateReview/UpdateReview";
 import PrivateRoute from "../Private/PrivateRoutes";
 
 export const router = createBrowserRouter([
@@ -58,6 +59,11 @@ export const router = createBrowserRouter([
             {
                 path: "/reviews",
                 element: <PrivateRoute>< MyReviews /></PrivateRoute>,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "/reviews/:id/edit",
+                element: <PrivateRoute>< UpdateReview /></PrivateRoute>,
                 errorElement: <ErrorPage />,
             },
             {

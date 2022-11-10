@@ -1,7 +1,8 @@
 import { FaFileSignature, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
-export const MyReviewsCard = ({ reviews, handleDelete }) => {
+export const MyReviewsCard = ({ reviews, handleDelete, handleEdit }) => {
 
 
 
@@ -59,8 +60,12 @@ export const MyReviewsCard = ({ reviews, handleDelete }) => {
             </p>
             <div className="flex justify-end ">
                 <button className="text-red-500 tex-xl" onClick={() => { handleDelete(_id) }}><FaTrash /></button>
-                <button className="text-sky-700 tex-xl  ml-6"><FaFileSignature /></button>
+                <Link to={`/reviews/${_id}/edit`}>
+                    <button className="text-sky-700 tex-xl  ml-6" onClick={() => { handleEdit(_id, reviewtext) }}
+                    ><FaFileSignature /></button>
+                </Link>
             </div>
+
         </div>
 
 

@@ -50,6 +50,9 @@ const MyReviews = () => {
             return;
         }
     }
+
+
+
     return (
         <div className="min-h-screen px-12">
 
@@ -66,6 +69,7 @@ const MyReviews = () => {
                                 myreviews.map(reviews => <MyReviewsCard
                                     key={myreviews._id}
                                     handleDelete={handleDelete}
+
                                     reviews={reviews}
                                 ></MyReviewsCard>)
                             }
