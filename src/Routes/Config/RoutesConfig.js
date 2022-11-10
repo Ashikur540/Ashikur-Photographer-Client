@@ -10,6 +10,7 @@ import Blogs from "../../Pages/Blogs/Blogs";
 import Home from "../../Pages/Home/Home";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ErrorPage from "../../Pages/Others/Error/ErrorPage";
+import PrivateRoute from "../Private/PrivateRoutes";
 
 export const router = createBrowserRouter([
 
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/services/add",
-                element: <Addservices />,
+                element: <PrivateRoute><Addservices /></PrivateRoute>,
                 errorElement: <ErrorPage />,
             },
             {
@@ -56,7 +57,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/reviews",
-                element: < MyReviews />,
+                element: <PrivateRoute>< MyReviews /></PrivateRoute>,
                 errorElement: <ErrorPage />,
             },
             {
