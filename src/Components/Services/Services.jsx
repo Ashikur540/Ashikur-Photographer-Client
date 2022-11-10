@@ -36,7 +36,7 @@ const Services = () => {
             <section>
                 <div class="container px-6 m-auto mb-16 md:mb-28">
                     <h1 className="text-3xl font-bold my-4">Our Services</h1>
-                    <p className="text-md my-8 text-slate-800 p-2 text-center w-1/2 mx-auto ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, vitae? Illum ipsum, laudantium dolorum quae temporibus aut deserunt nemo velit eligendi nisi officia expedita pariatur, quod consequatur maxime at. Amet?</p>
+                    <p className="text-md my-8 text-slate-800 p-2 text-center w-1/2 mx-auto ">Basically i moslty do street photoshoot with randome people .I take snaps with theri permission and if they praise i also give them edited best photo of them.Beside i also works as an associte with my brother.Beside i often try to join many competitions</p>
                     <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
                         {
                             services.map(service => <ServiceCard

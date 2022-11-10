@@ -18,9 +18,7 @@ export const About = () => {
                             </span>
                         </h2>
                         <p className="text-base text-gray-700 md:text-lg">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                            quae. explicabo.
+                            I am a photographer and videographer from bangladesh since 2019. Since when i got my first smart mobile phone in my hand hand i started capturing and day by day i growed up. i have wored in some weeding with my elder brother lo leran the composition in a practical way.So i hope i am able keep your faith on me.
                         </p>
                     </div>
 

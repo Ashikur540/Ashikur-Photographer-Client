@@ -4,30 +4,25 @@ export const Header = () => {
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
                 <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
-                    <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                        The quick, brown fox jumps over a very sad and{' '}
-                        <span className="inline-block text-deep-purple-accent-400">
-                            lazy dog
-                        </span>
+
+                    <h1 className="inline-block text-2xl text-deep-purple-accent-400">
+                        👋 Assalamualaikum{' '}
+                    </h1>
+                    <h2 className="mb-5 mt-3  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                        This is Ashikur rahman
                     </h2>
                     <p className="mb-5 text-base text-gray-700 md:text-lg">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                        I am here to brings your precious moments more live and make them special forever for you with my camera and my simple snapping skills.
+                        Here you cal also watch others review to choose me
                     </p>
                     <div className="flex items-center justify-center  my-10">
                         <button
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-slate-900 border-2 cursor-pointer  transition duration-200 rounded shadow-md bg-sky-50 hover:bg-accent-700 focus:shadow-outline focus:outline-none"
                         >
-                            Get started
+                            Explore more
                         </button>
-                        <button
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                        >
-                            Learn more
-                        </button>
+
                     </div>
                 </div>
 
