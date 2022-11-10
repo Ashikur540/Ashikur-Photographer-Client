@@ -1,5 +1,5 @@
 export const ReviewCard = ({ review, serviceName }) => {
-    const { email, name, serviceId, rating, reviewtext, image } = review
+    const { reviewerEmail, reviewerName, serviceId, rating, reviewtext, reviewerPhoto } = review
     return (
 
         <div className="flex px-8 py-4 border-1 rounded-sm border">
@@ -37,7 +37,7 @@ export const ReviewCard = ({ review, serviceName }) => {
                 <div className="flex items-center">
                     <a href="/" aria-label="Author" title="Author" className="mr-3">
                         <img
-                            src={image}
+                            src={reviewerPhoto}
                             alt="avatar"
                             className="object-cover w-10 h-10 rounded-full shadow-sm"
                         />
@@ -49,11 +49,28 @@ export const ReviewCard = ({ review, serviceName }) => {
                             title="Author"
                             className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                            {name}
+                            {reviewerName}
                         </p>
-                        <p className="text-sm font-medium leading-4 text-gray-600">
-                            Reviewer
+
+                        <p class="text-sm  uppercase tracking-widest text-slate-700 font-bold">
+                            {
+                                rating === 1 && "💛"
+                            }
+                            {
+                                rating === 2 && "💛💛"
+                            }
+                            {
+                                rating === 3 && "💛💛💛"
+                            }
+                            {
+                                rating === 4 && "💛💛💛💛"
+                            }
+                            {
+                                rating === 5 && "💛💛💛💛💛"
+                            }
+
                         </p>
+
                     </div>
                 </div>
             </div>
