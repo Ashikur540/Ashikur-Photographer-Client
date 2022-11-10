@@ -1,6 +1,10 @@
 import React from 'react'
+import { useDynamicTitle } from '../../Components/Hooks/DynamicTitle'
 
 const Blogs = () => {
+
+
+    useDynamicTitle("Ashikur- Blogs")
     return (
 
         <div>

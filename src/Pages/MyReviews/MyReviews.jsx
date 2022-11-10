@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { useDynamicTitle } from '../../Components/Hooks/DynamicTitle';
 import { MyReviewsCard } from '../../Components/MyReviewsCard/MyReviewsCard';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const MyReviews = () => {
+
     const { user } = useContext(AuthContext);
     const [myreviews, setMyreviews] = useState([]);
     const [refresh, setRefresh] = useState(false);
@@ -21,6 +23,8 @@ const MyReviews = () => {
             })
             .catch(err => toast.error(err.message))
     }, [user?.email, refresh])
+
+    useDynamicTitle('Ashkur- My reviews')
 
     const handleDelete = (id) => {
         const consent = window.confirm("are you sure to delete?")

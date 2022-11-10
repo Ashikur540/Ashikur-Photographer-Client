@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ReviewCard } from "../../../Components/ReviewCard/ReviewCard";
 import { AuthContext } from '../../../Contexts/AuthProvider';
+import { useDynamicTitle } from '../../Hooks/DynamicTitle';
 
 const ServiceDetails = () => {
     const { user } = useContext(AuthContext);
@@ -14,7 +15,7 @@ const ServiceDetails = () => {
     const { _id, name, about, price, rating, picture } = serviceDetails;
     console.log(serviceDetails);
 
-
+    useDynamicTitle("Ashikur- services")
     // load service id based reviews
     useEffect(() => {
         fetch(`http://localhost:5000/services/${_id}/reviews`)

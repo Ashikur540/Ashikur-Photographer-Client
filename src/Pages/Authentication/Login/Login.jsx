@@ -5,6 +5,7 @@ import { useLocation } from 'react-router';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import loginImg from "../../../../src/Assets/Image/login.jpg";
+import { useDynamicTitle } from '../../../Components/Hooks/DynamicTitle';
 import { AuthContext } from "../../../Contexts/AuthProvider";
 
 export const Login = () => {
@@ -17,7 +18,7 @@ export const Login = () => {
     // console.log("login:", user);
     const navigate = useNavigate();
 
-
+    useDynamicTitle('Ashikur-login')
 
 
     // states

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { useDynamicTitle } from '../Hooks/DynamicTitle';
 
 const Allservices = () => {
 
@@ -23,7 +24,7 @@ const Allservices = () => {
 
     }, [])
 
-
+    useDynamicTitle("Ashikur- All services")
     return (
         <section id="allservicesCards">
             <div class="container px-6 m-auto">

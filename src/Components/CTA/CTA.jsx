@@ -23,7 +23,7 @@ const CTA = () => {
                             <button
                                 href="#"
                                 class="inline-flex items-center rounded-full bg-indigo-700 px-8 py-3 text-white shadow-lg transition hover:bg-indigo-600 focus:outline-none focus:ring"
-                                onClick={toast.info("This feature is currently not available \n we are working on it")}
+                                onClick={() => toast.info("This feature is currently not available \n we are working on it")}
                             >
                                 <span class="text-sm font-medium"> Explore my shorts </span>
 

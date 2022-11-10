@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import regImg from "../../../../src/Assets/Image/register.jpg";
+import { useDynamicTitle } from "../../../Components/Hooks/DynamicTitle";
 import { AuthContext } from "../../../Contexts/AuthProvider";
 
 
@@ -178,7 +179,7 @@ export const Register = () => {
 
     }
 
-
+    useDynamicTitle("Ashikur- Register")
     return (
         <section className="min-h-screen">
             <div className="px-6 h-full text-gray-800 ">

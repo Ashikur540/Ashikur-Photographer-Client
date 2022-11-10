@@ -1,8 +1,9 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import { useDynamicTitle } from '../../Components/Hooks/DynamicTitle';
 
 const Addservices = () => {
-
+    useDynamicTitle("Ashikur-Add services")
     const handleSubmit = (e) => {
         e.preventDefault();
         let form = e.target;
