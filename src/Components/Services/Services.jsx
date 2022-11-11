@@ -8,11 +8,11 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://ashikur-photographer-server.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    console.log(data.data);
+                    // console.log(data.data);
                     setServices(data.data)
                 }
                 else {

@@ -44,6 +44,7 @@ export const Register = () => {
     const handleUserSignUp = (email, password) => {
         const name = userInfo.name;
         const url = userInfo.url;
+        console.log("from register Signup:", name, url)
         UserSignUp(email, password)
             .then(result => {
                 const user = result.user;

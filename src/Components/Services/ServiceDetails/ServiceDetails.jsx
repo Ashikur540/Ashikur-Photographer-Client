@@ -18,7 +18,7 @@ const ServiceDetails = () => {
     useDynamicTitle("Ashikur- services")
     // load service id based reviews
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${_id}/reviews`)
+        fetch(`https://ashikur-photographer-server.vercel.app/services/${_id}/reviews`)
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
@@ -52,7 +52,7 @@ const ServiceDetails = () => {
         }
         console.log(reviewInfo);
 
-        fetch(`http://localhost:5000/services/${_id}/reviews/add`, {
+        fetch(`https://ashikur-photographer-server.vercel.app/services/${_id}/reviews/add`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

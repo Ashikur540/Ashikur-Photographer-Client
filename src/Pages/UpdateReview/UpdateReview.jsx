@@ -11,7 +11,7 @@ const UpdateReview = () => {
     const navigate = useNavigate();
     // to get data feom the db
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${id}`)
+        fetch(`https://ashikur-photographer-server.vercel.app/reviews/${id}`)
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
@@ -36,7 +36,7 @@ const UpdateReview = () => {
         console.log("reviewtextUpdated", reviewtextUpdated);
         // send the updated value through patch mathod
 
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://ashikur-photographer-server.vercel.app/reviews/${id}`, {
 
             method: "PATCH",
             headers: {

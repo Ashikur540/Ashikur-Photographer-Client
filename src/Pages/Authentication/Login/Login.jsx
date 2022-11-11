@@ -15,6 +15,7 @@ export const Login = () => {
     const location = useLocation();
     console.log("from login-", location);
     const from = location.state?.from?.pathname || "/"
+    console.log("previous", from)
     // console.log("login:", user);
     const navigate = useNavigate();
 

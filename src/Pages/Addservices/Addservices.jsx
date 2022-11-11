@@ -22,7 +22,7 @@ const Addservices = () => {
             toast.error("provide the details")
         }
         else {
-            fetch('http://localhost:5000/services/add', {
+            fetch('https://ashikur-photographer-server.vercel.app/services/add', {
                 method: "post",
                 headers: {
                     "content-type": "application/json"

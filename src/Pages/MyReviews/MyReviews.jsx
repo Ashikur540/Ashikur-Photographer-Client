@@ -10,7 +10,7 @@ const MyReviews = () => {
     const [myreviews, setMyreviews] = useState([]);
     const [refresh, setRefresh] = useState(false);
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user.email}`)
+        fetch(`https://ashikur-photographer-server.vercel.app/reviews?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
@@ -29,7 +29,7 @@ const MyReviews = () => {
     const handleDelete = (id) => {
         const consent = window.confirm("are you sure to delete?")
         if (consent) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://ashikur-photographer-server.vercel.app/reviews/${id}`, {
                 method: "delete",
             })
                 .then(res => res.json())

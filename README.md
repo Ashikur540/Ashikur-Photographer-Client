@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# [Ashikur photographer](https://ashikur-photographer.web.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### ✨ Feature
+
+- User login logout.
+- form validation.
+- Private access to authenticated user.
+- User can add service by their own.
+- Single page application.
+- user can add ,delete,edit reviews.
+- See all your reviews in a separate page
+
+### 💣Technology
+
+- React and tailwind for front end
+- React router and toast for client side.
+- node js, express, mongo for server
+- vercel for hosting and dot env to protect.
 
 ## Available Scripts
 
